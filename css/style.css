@@ -1,0 +1,365 @@
+:root {
+  --primary: #b6b6b6;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: aliceblue;
+  color: #fff;
+  min-height: 3999px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #373737;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-family: "shrikhand", cursive;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #f6a7c1;
+}
+
+.navbar .navbar-logo span {
+  color: #ffeb34;
+}
+
+.navbar .navbar-nav a {
+  color: #c0b283;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  font-weight: 900;
+  font-family: "PT Serif", serif;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #f6981a;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #f6981a;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: aliceblue;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/*hero section*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(240, 248, 255, 1) 8%,
+    rgba(240, 248, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 65rem;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: #373737;
+  text-shadow: 1px 1px 3px;
+  line-height: 1.2;
+  font-family: "PT Serif", serif;
+}
+
+.hero .content h1 span {
+  color: #c0b283;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  line-height: 1.4;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #c0b283;
+  background-color: #373737;
+  border-radius: 1rem;
+  font-family: "PT Serif", serif;
+  font-weight: 500;
+}
+
+/* CSS About */
+.about,
+.catalog {
+  padding: 10rem 7% 7rem;
+}
+
+.about h2,
+.catalog h2,
+.catalog .card h4 {
+  color: #c0b283;
+  font-size: 2.7rem;
+  font-family: "PT Serif", serif;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about h2 a {
+  font-family: "shrikhand", cursive;
+  color: #f6a7c1;
+}
+
+.about h2 a span {
+  color: #ffeb34;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  padding: 0 1rem;
+  flex: 1 1 35rem;
+}
+
+.about .row .content h3 {
+  color: #373737;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.about .row .content p {
+  color: #373737;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* catalog */
+.catalog h2 {
+  margin-bottom: 2rem;
+}
+
+.catalog p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  color: #373737;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 5rem;
+}
+
+.catalog .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.catalog .row .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 30rem;
+  margin: auto;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #373737;
+}
+.catalog .row .card h1,
+.catalog .row .card p {
+  color: #c0b283;
+}
+
+.catalog .row .card h1 {
+  font-family: "PT Serif", serif;
+  font-size: 2rem;
+}
+
+.catalog .row .card img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.catalog .row .card p,
+.catalog .row .card .price,
+.catalog .row .card button {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  padding: 1rem 3rem;
+}
+
+.catalog .row .card .price {
+  color: #c0c0c0;
+  font-size: 22px;
+}
+
+.catalog .row .card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: #373737;
+  background-color: #c0b283;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition: 0.2s;
+  border-radius: 1rem;
+}
+
+.catalog .row .card button:hover {
+  opacity: 0.7;
+}
+
+/*Laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #010101;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 2rem;
+  }
+
+  .catalog .row {
+    object-fit: cover;
+    object-position: center;
+    display: inline-block;
+  }
+
+  .catalog .row .card {
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+}
+
+/*mobile phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
